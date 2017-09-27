@@ -1,0 +1,2 @@
+ack '(\/\*|\/\/|#|--|"|""")\s?qdo\s+(.*)\n' -l --print0 | xargs -0 -n 1 sed -r -i.qdo ':a;N;$!ba;s/(\/\*|\/\/|#|--|"|""")\s?qdo\s+([^\S\n]*)\n//g'
+find . -type f -name "*.qdo" -exec mv {} /tmp \;
